@@ -43,7 +43,7 @@ effort, because each new compiler release introduces breaking changes.
 
 Compiler plugins can influence different stages of the compilation process.
 
-![Kotlin compiler stages](compiler-stages.svg){width=650}
+![Kotlin compiler stages](compiler-stages.svg){width=300}
 
 The Kotlin compiler first parses the source code and turns it into a structured syntax tree. During analysis and resolution,
 the compiler determines what the code means by resolving names, checking types, and enforcing visibility.
@@ -51,6 +51,8 @@ the compiler determines what the code means by resolving names, checking types, 
 After that, the compiler generates an Intermediate Representation (IR), which is a data structure the compiler uses as a
 bridge between source code and machine code. This IR is progressively lowered into simpler forms and finally translated
 into target-specific output, such as JVM bytecode, JavaScript, or native machine code.
+
+![Kotlin compiler stages](compiler-stages-with-plugins.svg){width=650}
 
 Plugins that affect the initial compiler stages by changing how the compiler resolves code are called frontend plugins.
 For example, they can add annotations or introduce new methods without bodies, or change visibility modifiers. These 
